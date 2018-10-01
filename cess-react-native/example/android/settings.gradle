@@ -1,0 +1,6 @@
+rootProject.name = 'example'
+
+include ':app'
+
+include ':cess-react-native'
+project(':cess-react-native').projectDir = new File(rootProject.projectDir, '../../android')

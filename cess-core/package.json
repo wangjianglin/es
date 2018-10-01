@@ -1,0 +1,65 @@
+{
+  "name": "cess-core",
+  "version": "0.1.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src -d lib",
+    "prepublish": "npm run compile",
+    "mocha": "mocha --compilers js:babel-register",
+    "test-mocha": "npm run compile && mocha --compilers js:babel-register",
+
+    "test-mocha2": "mocha",
+    "test-only": "jasmine-node",
+    "test-jasmine": "babel-node spec.js",
+    "test": "npm run compile && node -r babel-register ./node_modules/.bin/karma start .karma.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangjianglin/js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangjianglin/js/issues"
+  },
+  "homepage": "https://github.com/wangjianglin/js#readme",
+
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.4",
+    "babel-cli": "^6.11.4",
+    "babel-register": "^6.11.6",
+    "babel-preset-es2015":"6.13.2",
+    "babel-preset-stage-0":"6.5.0",
+    "babel-polyfill":"6.13.0",
+    "mocha":"3.0.2",
+    "chai":"3.5.0",
+    "xmlhttprequest":"1.8.0",
+    "istanbul-instrumenter-loader": "^0.2.0",
+
+    "eslint": "^3.3.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "karma": "^1.2.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "phantomjs-prebuilt": "^2.1.12",
+    "webpack": "^1.13.2"
+  },
+  "comm":{
+    "sinon":"1.17.5",
+    "require-stub":"2.2.4",
+    "mocha-phantomjs":"4.1.0",
+    "jasmine":"2.4.1",
+    "jasmine-node":"2.0.0",
+    "jasmine-es6":"0.2.1"
+  }
+}

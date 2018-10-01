@@ -1,0 +1,10 @@
+.coverage
+.gitignore
+example
+node_modules
+__tests__
+test
+android/build
+android/gradle
+android/.gradle
+android/.idea
